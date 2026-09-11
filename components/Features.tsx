@@ -15,8 +15,8 @@ export function Features() {
         'Students browse available beds on a live warden map, filtered by gender and room type. They pick a bed, lock it for 5 minutes, and pay — no queues, no paperwork, no manual allocation.',
       icon: Bed,
       points: ['Live bed availability', 'Gender-filtered blocks', '5-minute lock window'],
-      screenshot: '/dashboard-admin.png',
-      alt: 'Admin dashboard with bed allocation stats',
+      screenshot: '/bed-picker.png',
+      alt: 'Bed picker — live bed availability grid',
     },
     {
       title: 'Student journey tracker',
@@ -33,8 +33,8 @@ export function Features() {
         'Issue single-use bursary codes to students who paid offline (bank transfer, cash). Students redeem the code in-app to confirm their bed — full audit trail, no double-spending.',
       icon: Ticket,
       points: ['Single-use codes', 'Auto-reconciliation', 'Fraud prevention built-in'],
-      screenshot: '/bursary-dashboard.png',
-      alt: 'Bursary dashboard with code issuance',
+      screenshot: '/dashboard-admin.png',
+      alt: 'Admin dashboard with bursary code management',
     },
   ];
 
@@ -86,13 +86,14 @@ export function Features() {
                   </a>
                 </div>
 
-                {/* Screenshot */}
+                {/* Screenshot with dark-theme filter */}
                 <div className="screenshot-frame">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={feature.screenshot}
                     alt={feature.alt}
                     className="w-full h-auto"
+                    style={{ filter: 'invert(1) hue-rotate(180deg) brightness(0.85)' }}
                   />
                 </div>
               </div>
