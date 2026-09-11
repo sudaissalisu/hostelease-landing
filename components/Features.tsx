@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+import { StudentDashboardDark, DashboardMockupDark } from './DashboardMockup';
 
 export function Features() {
   const features = [
@@ -9,8 +9,15 @@ export function Features() {
         'Students browse available beds on a live warden map, filtered by gender and room type. They pick a bed, lock it for 5 minutes, and pay — no queues, no paperwork, no manual allocation.',
       icon: '🛏️',
       points: ['Live bed availability', 'Gender-filtered blocks', '5-minute lock window'],
-      screenshot: '/bed-picker.png',
-      alt: 'Student bed picker — live bed availability grid',
+      mockup: <DashboardMockupDark />,
+    },
+    {
+      title: 'Student journey tracker',
+      description:
+        'Each student sees their allocation journey at a glance — profile verification, application, bed selection, payment, and check-in. The NextStepCTA always shows what to do next.',
+      icon: '🎓',
+      points: ['5-step progress tracker', 'Smart next-step CTA', 'QR code for check-in'],
+      mockup: <StudentDashboardDark />,
     },
     {
       title: 'Bursary code payments',
@@ -18,22 +25,12 @@ export function Features() {
         'Issue single-use bursary codes to students who paid offline (bank transfer, cash). Students redeem the code in-app to confirm their bed — full audit trail, no double-spending.',
       icon: '🎫',
       points: ['Single-use codes', 'Auto-reconciliation', 'Fraud prevention built-in'],
-      screenshot: '/bursary-dashboard.png',
-      alt: 'Bursary dashboard — issue and track bursary codes',
-    },
-    {
-      title: 'QR check-in & verification',
-      description:
-        'Each allocation generates a unique QR code. Wardens scan it at check-in to verify the student, bed, and session in seconds — no more paper allocation letters.',
-      icon: '📱',
-      points: ['One-tap check-in', 'Public verification page', 'Branded PDF allocation letter'],
-      screenshot: '/student-allocation.png',
-      alt: 'Student allocation card with QR code for check-in',
+      mockup: <DashboardMockupDark />,
     },
   ];
 
   return (
-    <section id="features" className="border-t border-slate-200 bg-white py-16 md:py-24">
+    <section id="features" className="border-t border-slate-200 bg-slate-50 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-ssm-600">Features</p>
@@ -80,16 +77,8 @@ export function Features() {
                 </a>
               </div>
 
-              {/* Real screenshot */}
-              <div className="screenshot-frame">
-                <Image
-                  src={feature.screenshot}
-                  alt={feature.alt}
-                  width={600}
-                  height={400}
-                  className="w-full h-auto"
-                />
-              </div>
+              {/* Dark-theme mockup */}
+              <div>{feature.mockup}</div>
             </div>
           ))}
         </div>

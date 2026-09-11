@@ -7,7 +7,7 @@ export function Pricing() {
       description: 'For small institutions getting started with digital hostel management.',
       price: '$49',
       period: 'per month',
-      cta: 'Get started',
+      cta: 'Schedule a demo',
       highlighted: false,
       features: [
         'Up to 500 beds',
@@ -25,7 +25,7 @@ export function Pricing() {
       description: 'For universities managing multiple hostels and thousands of beds.',
       price: '$199',
       period: 'per month',
-      cta: 'Get started',
+      cta: 'Schedule a demo',
       highlighted: true,
       badge: 'Most popular',
       features: [

@@ -1,42 +1,46 @@
 'use client';
 
 export function Integrations() {
-  const integrations = [
+  const features = [
     {
-      name: 'Paystack',
-      description: 'Accept card payments directly in the platform — students pay their hostel fee without leaving the app.',
-      initials: 'P',
-      color: 'bg-blue-500',
+      name: 'Multi-Role Access',
+      description: 'Super Admin, Admin, Bursary, Moderator, and Student roles — each with granular per-feature permissions.',
+      icon: '🔐',
     },
     {
-      name: 'Flutterwave',
-      description: 'Process payments via Flutterwave — supports bank transfers, USSD, and cards for maximum student reach.',
-      initials: 'F',
-      color: 'bg-orange-500',
+      name: 'Real-Time Occupancy',
+      description: 'Live bed availability across all blocks, rooms, and floors. Spot capacity issues before they become problems.',
+      icon: '📊',
     },
     {
-      name: 'OPay',
-      description: 'Mobile-money-first payments via OPay — perfect for students who prefer mobile wallets.',
-      initials: 'O',
-      color: 'bg-green-500',
+      name: 'Payment Reconciliation',
+      description: 'Auto-reconcile bursary codes against payments. Full audit trail for every naira. Fraud prevention built-in.',
+      icon: '💰',
     },
     {
-      name: 'Remita',
-      description: 'Government-standard payment processing via Remita — invoice generation and reconciliation built-in.',
-      initials: 'R',
-      color: 'bg-red-500',
+      name: 'Audit Logging',
+      description: 'Every action is logged — who did what, when, from where. Export to CSV for compliance reviews.',
+      icon: '📋',
     },
     {
-      name: 'Gmail SMTP',
-      description: 'Send branded email notifications — allocation confirmations, payment receipts, and announcements.',
-      initials: 'G',
-      color: 'bg-rose-500',
+      name: 'Email + SMS Notifications',
+      description: 'Students get allocation confirmations, payment receipts, and check-in reminders via email and SMS.',
+      icon: '✉️',
     },
     {
-      name: 'WhatsApp SMS',
-      description: 'Notify students via SMS when their bed is allocated or their bursary code is ready — instant delivery.',
-      initials: 'W',
-      color: 'bg-emerald-500',
+      name: 'Maintenance Ticketing',
+      description: 'Students report issues from their dashboard. Wardens track, assign, and resolve — all in one place.',
+      icon: '🔧',
+    },
+    {
+      name: 'Custom Branding',
+      description: 'Your logo, your colors, your domain. White-label the platform as your institution\'s own.',
+      icon: '🎨',
+    },
+    {
+      name: 'Public Room Availability',
+      description: 'Students browse available beds before they even log in — a public page showing live occupancy.',
+      icon: '🌐',
     },
   ];
 
@@ -45,42 +49,28 @@ export function Integrations() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-ssm-600">Integrations</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-ssm-600">Platform Features</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Get more value from your tools
+            Everything you need to run your hostel
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Connect your payment gateways, email, and SMS providers. HostelEase works
-            with the tools your institution already uses — set up takes minutes, not days.
+            A complete platform with role-based access, real-time analytics, payment reconciliation,
+            and built-in communication. No add-ons, no extra cost.
           </p>
         </div>
 
-        {/* Integration grid */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {integrations.map((int) => (
+        {/* Feature grid */}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map((feature) => (
             <div
-              key={int.name}
-              className="card-lift rounded-2xl border border-slate-200 bg-white p-6"
+              key={feature.name}
+              className="card-lift rounded-2xl border border-slate-200 bg-white p-5"
             >
-              <div className="flex items-center gap-4">
-                <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${int.color} text-white font-bold text-lg shadow-lg`}>
-                  {int.initials}
-                </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900">{int.name}</h3>
-                  <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Integration</p>
-                </div>
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ssm-50 text-2xl">
+                {feature.icon}
               </div>
-              <p className="mt-4 text-sm text-slate-600">{int.description}</p>
-              <a
-                href="#"
-                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-ssm-600 hover:text-ssm-700"
-              >
-                View integration
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
+              <h3 className="mt-4 text-base font-semibold text-slate-900">{feature.name}</h3>
+              <p className="mt-2 text-sm text-slate-600 leading-snug">{feature.description}</p>
             </div>
           ))}
         </div>

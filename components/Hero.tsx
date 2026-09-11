@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import { DashboardMockupDark } from './DashboardMockup';
 
 export function Hero() {
   const [email, setEmail] = useState('');
@@ -59,7 +59,7 @@ export function Hero() {
             type="submit"
             className="rounded-lg bg-ssm-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-ssm-600/25 transition-all hover:bg-ssm-700 hover:shadow-ssm-600/30"
           >
-            Get started
+            Schedule a demo
           </button>
         </form>
         <p className="mt-3 text-center text-xs text-slate-500 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -67,32 +67,9 @@ export function Hero() {
           <a href="#" className="font-medium text-ssm-600 hover:underline">privacy policy</a>.
         </p>
 
-        {/* Real dashboard screenshot */}
+        {/* Dark-theme dashboard mockup */}
         <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <div className="screenshot-frame mx-auto max-w-5xl">
-            {/* Browser chrome */}
-            <div className="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-4 py-3">
-              <div className="flex gap-1.5">
-                <div className="h-3 w-3 rounded-full bg-red-400" />
-                <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                <div className="h-3 w-3 rounded-full bg-green-400" />
-              </div>
-              <div className="ml-4 flex-1">
-                <div className="mx-auto max-w-md rounded-md bg-white px-3 py-1 text-xs text-slate-400 border border-slate-200">
-                  🔒 hostelease.vercel.app/dashboard
-                </div>
-              </div>
-            </div>
-            {/* Real screenshot */}
-            <Image
-              src="/dashboard-admin.png"
-              alt="HostelEase admin dashboard — live bed allocation stats, occupancy, and revenue"
-              width={1200}
-              height={750}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
+          <DashboardMockupDark />
         </div>
       </div>
     </section>
