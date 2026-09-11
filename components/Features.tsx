@@ -86,14 +86,13 @@ export function Features() {
                   </a>
                 </div>
 
-                {/* Screenshot with dark-theme filter */}
+                {/* Real screenshot — light theme, properly sized */}
                 <div className="screenshot-frame">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={feature.screenshot}
                     alt={feature.alt}
                     className="w-full h-auto"
-                    style={{ filter: 'invert(1) hue-rotate(180deg) brightness(0.85)' }}
                   />
                 </div>
               </div>

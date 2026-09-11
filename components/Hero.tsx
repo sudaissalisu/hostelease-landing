@@ -66,33 +66,32 @@ export function Hero() {
           <a href="#" className="font-medium text-ssm-600 hover:underline">privacy policy</a>.
         </p>
 
-        {/* Real dashboard screenshot in a dark browser frame */}
+        {/* Real dashboard screenshot */}
         <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <div className="screenshot-frame mx-auto max-w-5xl">
-            {/* Browser chrome (dark) */}
-            <div className="flex items-center gap-2 border-b border-slate-700 bg-slate-800 px-4 py-3">
+            {/* Browser chrome (light) */}
+            <div className="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-4 py-3">
               <div className="flex gap-1.5">
                 <div className="h-3 w-3 rounded-full bg-red-400" />
                 <div className="h-3 w-3 rounded-full bg-yellow-400" />
                 <div className="h-3 w-3 rounded-full bg-green-400" />
               </div>
               <div className="ml-4 flex-1">
-                <div className="mx-auto max-w-md rounded-md bg-slate-700 px-3 py-1 text-xs text-slate-400">
-                  🔒 ausu.ssm.com.ng/dashboard
+                <div className="mx-auto max-w-md rounded-md bg-white px-3 py-1 text-xs text-slate-400 border border-slate-200">
+                  ausu.ssm.com.ng/dashboard
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-xs text-slate-400">
+              <div className="flex items-center gap-2 text-xs text-slate-500">
                 <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 Live
               </div>
             </div>
-            {/* Real screenshot — dark-theme filter applied via CSS */}
+            {/* Real screenshot — light theme, properly sized (no stretching) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/dashboard-admin.png"
               alt="HostelEase admin dashboard — live bed allocation stats, occupancy, and revenue"
               className="w-full h-auto block"
-              style={{ filter: 'invert(1) hue-rotate(180deg) brightness(0.85)' }}
             />
           </div>
         </div>
