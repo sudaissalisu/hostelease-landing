@@ -45,7 +45,7 @@ export function Integrations() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">Integrations</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-ssm-600">Integrations</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Get more value from your tools
           </h2>
@@ -74,7 +74,7 @@ export function Integrations() {
               <p className="mt-4 text-sm text-slate-600">{int.description}</p>
               <a
                 href="#"
-                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:text-brand-700"
+                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-ssm-600 hover:text-ssm-700"
               >
                 View integration
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

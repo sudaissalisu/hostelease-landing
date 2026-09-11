@@ -1,4 +1,5 @@
 'use client';
+import { Logo } from './Logo';
 
 export function Footer() {
   return (
@@ -22,16 +23,9 @@ export function Footer() {
       {/* Footer links */}
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
-          {/* Brand */}
+          {/* Brand — SSM logo + | HostelEase */}
           <div className="col-span-2">
-            <a href="#" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white font-bold text-lg">
-                H
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                Hostel<span className="text-brand-400">Ease</span>
-              </span>
-            </a>
+            <Logo />
             <p className="mt-4 max-w-xs text-sm text-slate-400">
               The modern hostel management platform for universities. Built by
               SSM Limited — operated under license by leading institutions.
@@ -47,7 +41,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white">Product</h4>
             <ul className="mt-4 space-y-3 text-sm">
               {['Overview', 'Features', 'Solutions', 'Tutorials', 'Pricing', 'Releases'].map((l) => (
-                <li key={l}><a href="#" className="text-slate-400 hover:text-brand-400">{l}</a></li>
+                <li key={l}><a href="#" className="text-slate-400 hover:text-ssm-400">{l}</a></li>
               ))}
             </ul>
           </div>
@@ -57,7 +51,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white">Company</h4>
             <ul className="mt-4 space-y-3 text-sm">
               {['About us', 'Careers', 'Press', 'News', 'Contact'].map((l) => (
-                <li key={l}><a href="#" className="text-slate-400 hover:text-brand-400">{l}</a></li>
+                <li key={l}><a href="#" className="text-slate-400 hover:text-ssm-400">{l}</a></li>
               ))}
             </ul>
           </div>
@@ -67,7 +61,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white">Resources</h4>
             <ul className="mt-4 space-y-3 text-sm">
               {['Blog', 'Newsletter', 'Events', 'Help centre', 'Support'].map((l) => (
-                <li key={l}><a href="#" className="text-slate-400 hover:text-brand-400">{l}</a></li>
+                <li key={l}><a href="#" className="text-slate-400 hover:text-ssm-400">{l}</a></li>
               ))}
             </ul>
           </div>
@@ -77,7 +71,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white">Legal</h4>
             <ul className="mt-4 space-y-3 text-sm">
               {['Terms', 'Privacy', 'Cookies', 'Licenses', 'Settings'].map((l) => (
-                <li key={l}><a href="#" className="text-slate-400 hover:text-brand-400">{l}</a></li>
+                <li key={l}><a href="#" className="text-slate-400 hover:text-ssm-400">{l}</a></li>
               ))}
             </ul>
           </div>
@@ -90,7 +84,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             {['X', 'LinkedIn', 'Facebook', 'GitHub'].map((social) => (
-              <a key={social} href="#" className="text-xs text-slate-500 hover:text-brand-400">
+              <a key={social} href="#" className="text-xs text-slate-500 hover:text-ssm-400">
                 {social}
               </a>
             ))}

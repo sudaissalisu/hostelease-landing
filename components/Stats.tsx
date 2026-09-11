@@ -24,7 +24,7 @@ export function Stats() {
         <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-4xl font-extrabold tracking-tight text-brand-400 sm:text-5xl">
+              <p className="text-4xl font-extrabold tracking-tight text-ssm-400 sm:text-5xl">
                 {stat.value}
               </p>
               <p className="mt-2 text-sm font-medium text-slate-400">{stat.label}</p>

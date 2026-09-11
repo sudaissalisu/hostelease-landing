@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Logo } from './Logo';
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,15 +17,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/60 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white font-bold text-lg shadow-lg shadow-brand-500/30">
-            H
-          </div>
-          <span className="text-xl font-bold tracking-tight text-slate-900">
-            Hostel<span className="text-brand-600">Ease</span>
-          </span>
-        </a>
+        <Logo />
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
@@ -32,7 +25,7 @@ export function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-slate-600 transition-colors hover:text-brand-600"
+              className="text-sm font-medium text-slate-600 transition-colors hover:text-ssm-600"
             >
               {link.label}
             </a>
@@ -43,13 +36,13 @@ export function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <a
             href="#"
-            className="text-sm font-semibold text-slate-700 transition-colors hover:text-brand-600"
+            className="text-sm font-semibold text-slate-700 transition-colors hover:text-ssm-600"
           >
             Log in
           </a>
           <a
             href="#"
-            className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-700 hover:shadow-brand-600/30"
+            className="rounded-lg bg-ssm-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-ssm-600/20 transition-all hover:bg-ssm-700 hover:shadow-ssm-600/30"
           >
             Sign up
           </a>
@@ -89,7 +82,7 @@ export function Navbar() {
               <a href="#" className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
                 Log in
               </a>
-              <a href="#" className="rounded-lg bg-brand-600 px-3 py-2 text-center text-sm font-semibold text-white">
+              <a href="#" className="rounded-lg bg-ssm-600 px-3 py-2 text-center text-sm font-semibold text-white">
                 Sign up
               </a>
             </div>

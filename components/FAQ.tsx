@@ -44,7 +44,7 @@ export function FAQ() {
     <section id="faq" className="border-t border-slate-200 bg-white py-16 md:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">FAQ</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-ssm-600">FAQ</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Frequently asked questions
           </h2>
@@ -93,7 +93,7 @@ export function FAQ() {
           </p>
           <a
             href="#"
-            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700"
+            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-ssm-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-ssm-600/25 transition-all hover:bg-ssm-700"
           >
             Get in touch
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

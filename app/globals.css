@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,9 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
+  --ssm-blue: #2563eb;
+  --ssm-red: #dc2626;
+  --ssm-yellow: #fcd34d;
 }
 
 * {
@@ -20,7 +23,7 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,12 +44,12 @@ body {
   background: #94a3b8;
 }
 
-/* Gradient mesh background for hero */
+/* Hero gradient — SSM brand colors (blue + subtle red/yellow accents) */
 .hero-gradient {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.15), transparent),
-    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(5, 150, 105, 0.08), transparent),
-    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(110, 231, 183, 0.1), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37, 99, 235, 0.12), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(220, 38, 38, 0.06), transparent),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(252, 211, 77, 0.08), transparent);
 }
 
 /* Grid pattern overlay */
@@ -59,13 +62,18 @@ body {
   mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black, transparent);
 }
 
-/* Animated gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+/* SSM gradient text — blue → red → yellow (the three logo letters) */
+.ssm-gradient-text {
+  background: linear-gradient(135deg, #2563eb 0%, #dc2626 50%, #fcd34d 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* SSM logo wordmark — replicates the colored letters S(blue) S(red) M(yellow) */
+.ssm-blue { color: #2563eb; }
+.ssm-red { color: #dc2626; }
+.ssm-yellow { color: #f59e0b; }
 
 /* Card hover lift */
 .card-lift {
@@ -73,7 +81,7 @@ body {
 }
 .card-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
 }
 
 /* Smooth marquee for logos */
@@ -92,4 +100,35 @@ body {
 }
 .chart-bar {
   animation: growBar 1s ease-out forwards;
+}
+
+/* SSM color dots — for the logo animation */
+.ssm-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.ssm-dot-blue { background: #2563eb; }
+.ssm-dot-red { background: #dc2626; }
+.ssm-dot-yellow { background: #fcd34d; }
+
+/* Premium screenshot frame */
+.screenshot-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 20px 60px -15px rgba(37, 99, 235, 0.15),
+    0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.screenshot-frame:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 30px 80px -20px rgba(37, 99, 235, 0.25),
+    0 15px 40px -10px rgba(0, 0, 0, 0.15);
 }

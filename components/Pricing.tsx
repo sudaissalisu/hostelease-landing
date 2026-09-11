@@ -67,7 +67,7 @@ export function Pricing() {
     <section id="pricing" className="border-t border-slate-200 bg-slate-50 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">Pricing</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-ssm-600">Pricing</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Plans that fit your scale
           </h2>
@@ -83,12 +83,12 @@ export function Pricing() {
               key={plan.name}
               className={`relative rounded-2xl border p-8 ${
                 plan.highlighted
-                  ? 'border-brand-500 bg-white shadow-2xl shadow-brand-500/10 lg:scale-105'
+                  ? 'border-ssm-500 bg-white shadow-2xl shadow-ssm-500/10 lg:scale-105'
                   : 'border-slate-200 bg-white'
               }`}
             >
               {plan.badge && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-600 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-lg">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-ssm-600 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-lg">
                   {plan.badge}
                 </span>
               )}
@@ -105,8 +105,8 @@ export function Pricing() {
                 href="#"
                 className={`mt-6 block rounded-lg px-4 py-2.5 text-center text-sm font-semibold transition-all ${
                   plan.highlighted
-                    ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/25 hover:bg-brand-700'
-                    : 'border border-slate-300 text-slate-700 hover:border-brand-500 hover:text-brand-600'
+                    ? 'bg-ssm-600 text-white shadow-lg shadow-ssm-600/25 hover:bg-ssm-700'
+                    : 'border border-slate-300 text-slate-700 hover:border-ssm-500 hover:text-ssm-600'
                 }`}
               >
                 {plan.cta}
@@ -117,7 +117,7 @@ export function Pricing() {
                 <ul className="mt-4 space-y-3">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="mt-0.5 shrink-0 text-brand-500">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="mt-0.5 shrink-0 text-ssm-500">
                         <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       {feature}
