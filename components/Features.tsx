@@ -1,5 +1,11 @@
 'use client';
-import { StudentDashboardDark, DashboardMockupDark } from './DashboardMockup';
+
+import {
+  Bed,
+  GraduationCap,
+  Ticket,
+  ArrowRight,
+} from '@phosphor-icons/react';
 
 export function Features() {
   const features = [
@@ -7,25 +13,28 @@ export function Features() {
       title: 'Self-serve bed picker',
       description:
         'Students browse available beds on a live warden map, filtered by gender and room type. They pick a bed, lock it for 5 minutes, and pay — no queues, no paperwork, no manual allocation.',
-      icon: '🛏️',
+      icon: Bed,
       points: ['Live bed availability', 'Gender-filtered blocks', '5-minute lock window'],
-      mockup: <DashboardMockupDark />,
+      screenshot: '/dashboard-admin.png',
+      alt: 'Admin dashboard with bed allocation stats',
     },
     {
       title: 'Student journey tracker',
       description:
         'Each student sees their allocation journey at a glance — profile verification, application, bed selection, payment, and check-in. The NextStepCTA always shows what to do next.',
-      icon: '🎓',
+      icon: GraduationCap,
       points: ['5-step progress tracker', 'Smart next-step CTA', 'QR code for check-in'],
-      mockup: <StudentDashboardDark />,
+      screenshot: '/dashboard-student.png',
+      alt: 'Student dashboard with journey tracker',
     },
     {
       title: 'Bursary code payments',
       description:
         'Issue single-use bursary codes to students who paid offline (bank transfer, cash). Students redeem the code in-app to confirm their bed — full audit trail, no double-spending.',
-      icon: '🎫',
+      icon: Ticket,
       points: ['Single-use codes', 'Auto-reconciliation', 'Fraud prevention built-in'],
-      mockup: <DashboardMockupDark />,
+      screenshot: '/bursary-dashboard.png',
+      alt: 'Bursary dashboard with code issuance',
     },
   ];
 
@@ -44,43 +53,51 @@ export function Features() {
         </div>
 
         <div className="mt-16 space-y-20">
-          {features.map((feature, i) => (
-            <div
-              key={feature.title}
-              className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${i % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}`}
-            >
-              {/* Text */}
-              <div>
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ssm-50 text-2xl">
-                  {feature.icon}
+          {features.map((feature, i) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={feature.title}
+                className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${i % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}`}
+              >
+                {/* Text */}
+                <div>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ssm-50 text-ssm-600">
+                    <Icon size={28} weight="duotone" />
+                  </div>
+                  <h3 className="mt-4 text-2xl font-bold text-slate-900">{feature.title}</h3>
+                  <p className="mt-3 text-lg text-slate-600">{feature.description}</p>
+                  <ul className="mt-6 space-y-3">
+                    {feature.points.map((point) => (
+                      <li key={point} className="flex items-center gap-3 text-base text-slate-700">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-ssm-600">
+                          <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="#"
+                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-ssm-600 transition-colors hover:text-ssm-700"
+                  >
+                    Learn more
+                    <ArrowRight size={14} weight="bold" />
+                  </a>
                 </div>
-                <h3 className="mt-4 text-2xl font-bold text-slate-900">{feature.title}</h3>
-                <p className="mt-3 text-lg text-slate-600">{feature.description}</p>
-                <ul className="mt-6 space-y-3">
-                  {feature.points.map((point) => (
-                    <li key={point} className="flex items-center gap-3 text-base text-slate-700">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-ssm-600">
-                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="#"
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-ssm-600 transition-colors hover:text-ssm-700"
-                >
-                  Learn more
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </a>
-              </div>
 
-              {/* Dark-theme mockup */}
-              <div>{feature.mockup}</div>
-            </div>
-          ))}
+                {/* Screenshot */}
+                <div className="screenshot-frame">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={feature.screenshot}
+                    alt={feature.alt}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

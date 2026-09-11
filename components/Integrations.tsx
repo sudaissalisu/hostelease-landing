@@ -1,53 +1,63 @@
 'use client';
 
+import {
+  Users,
+  ChartBar,
+  CurrencyCircleDollar,
+  ClipboardText,
+  EnvelopeSimple,
+  Wrench,
+  PaintBrush,
+  Globe,
+} from '@phosphor-icons/react';
+
 export function Integrations() {
   const features = [
     {
       name: 'Multi-Role Access',
       description: 'Super Admin, Admin, Bursary, Moderator, and Student roles — each with granular per-feature permissions.',
-      icon: '🔐',
+      icon: Users,
     },
     {
       name: 'Real-Time Occupancy',
       description: 'Live bed availability across all blocks, rooms, and floors. Spot capacity issues before they become problems.',
-      icon: '📊',
+      icon: ChartBar,
     },
     {
       name: 'Payment Reconciliation',
       description: 'Auto-reconcile bursary codes against payments. Full audit trail for every naira. Fraud prevention built-in.',
-      icon: '💰',
+      icon: CurrencyCircleDollar,
     },
     {
       name: 'Audit Logging',
       description: 'Every action is logged — who did what, when, from where. Export to CSV for compliance reviews.',
-      icon: '📋',
+      icon: ClipboardText,
     },
     {
       name: 'Email + SMS Notifications',
       description: 'Students get allocation confirmations, payment receipts, and check-in reminders via email and SMS.',
-      icon: '✉️',
+      icon: EnvelopeSimple,
     },
     {
       name: 'Maintenance Ticketing',
       description: 'Students report issues from their dashboard. Wardens track, assign, and resolve — all in one place.',
-      icon: '🔧',
+      icon: Wrench,
     },
     {
       name: 'Custom Branding',
       description: 'Your logo, your colors, your domain. White-label the platform as your institution\'s own.',
-      icon: '🎨',
+      icon: PaintBrush,
     },
     {
       name: 'Public Room Availability',
       description: 'Students browse available beds before they even log in — a public page showing live occupancy.',
-      icon: '🌐',
+      icon: Globe,
     },
   ];
 
   return (
     <section id="products" className="border-t border-slate-200 bg-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-ssm-600">Platform Features</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -59,20 +69,22 @@ export function Integrations() {
           </p>
         </div>
 
-        {/* Feature grid */}
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature) => (
-            <div
-              key={feature.name}
-              className="card-lift rounded-2xl border border-slate-200 bg-white p-5"
-            >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ssm-50 text-2xl">
-                {feature.icon}
+          {features.map((feature) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={feature.name}
+                className="card-lift rounded-2xl border border-slate-200 bg-white p-5"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ssm-50 text-ssm-600">
+                  <Icon size={24} weight="duotone" />
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-slate-900">{feature.name}</h3>
+                <p className="mt-2 text-sm text-slate-600 leading-snug">{feature.description}</p>
               </div>
-              <h3 className="mt-4 text-base font-semibold text-slate-900">{feature.name}</h3>
-              <p className="mt-2 text-sm text-slate-600 leading-snug">{feature.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
