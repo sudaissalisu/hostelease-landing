@@ -13,7 +13,7 @@ import {
   ChatCircleDots,
   BookOpen,
   Code,
-  TrendingUp,
+  TrendUp,
   Question,
   CaretDown,
   List,
@@ -55,7 +55,7 @@ const DROPDOWNS: NavDropdown[] = [
     items: [
       { label: 'Documentation', description: 'Guides + tutorials for every role', icon: BookOpen },
       { label: 'API Reference', description: 'REST API for custom integrations', icon: Code },
-      { label: 'Case Studies', description: 'How universities use HostelEase', icon: TrendingUp },
+      { label: 'Case Studies', description: 'How universities use HostelEase', icon: TrendUp },
       { label: 'Help Centre', description: 'FAQs + troubleshooting', icon: Question },
     ],
   },
